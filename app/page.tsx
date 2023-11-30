@@ -5,8 +5,8 @@ export default function Home() {
   return (
 
     <main className=' min-h-screen'>
-      <div className='flex flex-row px-40 h-screen bg-[#79a2d8]'>
-        <Image src='/chain.png' alt='' fill className='-z-0 opacity-60'/>
+      <div className='flex flex-row px-40 h-screen'>
+        <Image src='/image.png' alt='' fill className='-z-0 opacity-60'/>
         <div className='flex flex-col mt-auto mb-14 z-30'>
           <div className='flex flex-col gap-4'>
             <p className='text-5xl font-semibold'>Decentralized Powers</p>
