@@ -13,28 +13,28 @@ type feature = {
 export default function Home() {
   const features: feature[] = [
     {
-      key:1,
+      key: 1,
       name: "Feature name",
       description: " Some Feature description will come here",
       icon: "SiNextdotjs"
     },
     {
-      key:1,
+      key: 1,
       name: "Feature name",
       description: " Some Feature description will come here",
       icon: "SiNextdotjs"
     }, {
-      key:1,
+      key: 1,
       name: "Feature name",
       description: " Some Feature description will come here",
       icon: "SiNextdotjs"
     }, {
-      key:1,
+      key: 1,
       name: "Feature name",
       description: " Some Feature description will come here",
       icon: "SiNextdotjs"
     }, {
-      key:1,
+      key: 1,
       name: "Feature name",
       description: " Some Feature description will come here",
       icon: "SiNextdotjs"
@@ -69,7 +69,7 @@ export default function Home() {
           <p className='text-4xl font-bold leading-relaxed'>Explore What <span className='text-[#E84142]'>Hyper Updates</span> Provides</p>
         </div>
         {features.map((data) => (
-          <div key={data.key} className='drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] transition-all duration-500 hover:scale-[1.02]'>
+          <div key={data.key} className='drop-shadow-[0_20px_20px_rgba(0,0,0,0.40)] transition-all duration-500 hover:scale-[1.02]'>
             <div className='flex flex-col z-10  w-80 h-60 rounded p-5 bg-[#181c2e]' style={{ clipPath: 'polygon(0 0,calc(100% - 80.00px) 0,100% 80.00px,100% 100%,0 100%)' }}>
               <div className='text-5xl pb-5'>
                 <SiNextdotjs />
@@ -81,12 +81,29 @@ export default function Home() {
         ))}
 
       </div>
-      <div className=' px-40 flex flex-row gap-10 items-center justify-center py-20'>
+      <div className='py-20 flex flex-row px-40 items-center'>
+        <div className='lg:w-1/3'>
+          <p className='text-lg mb-2'>Create A New Project to get started!</p>
+          <p className='text-4xl font-semibold'>
+            Secure Your Updates, Unleash Innovation!
+          </p>
+          <p className='my-5 text-base'>
+            Lock in confidence with secure updates. Unleash innovation without compromise, ensuring your software evolution is both cutting-edge and secure.
+          </p>
+          <Button>New Project</Button>
+        </div>
+        <div className='relative w-[80vh] h-[40vh] ml-auto '>
+          <Image src="/ss site.jpg" alt='' fill style={{ objectFit: "contain" }} className='rounded-2xl' />
+        </div>
+      </div>
+      <div className=' px-40 flex flex-row gap-10 items-center justify-center py-20 bg-neutral-100'>
         <p className='text-5xl font-bold'>Built on</p>
         <div className='relative w-40 h-40'>
           <Image src="/avalanche-avax-logo.png" alt="" fill style={{ objectFit: "contain" }} />
         </div>
       </div>
+
+
     </main>
   )
 }
