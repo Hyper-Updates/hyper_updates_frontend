@@ -56,7 +56,7 @@ export default function Projects() {
     <div className={'min-h-screen px-80 py-20 flex flex-col '}>
       <div className={`flex flex-col gap-5 ${visiblity ? "blur-lg" : ""}`}>
         {projects.map((data) => (
-          <Card>
+          <Card key={data.project_name}>
             <CardHeader>
               <CardTitle>{data.project_name}</CardTitle>
               <CardDescription>{data.organization}</CardDescription>
