@@ -68,8 +68,8 @@ const SecondTab: React.FC<SecondTabProps> = ({currentStep, updateCurrentStep, fo
                     <label className='flex flex-col gap-1 text-xm '>
                         Release version *
                         <Input type="text"
-                            name="organization"
-                            value={formData.organization}
+                            name="release"
+                            value={formData.release}
                             onChange={handleInputChange}
                             required className='bg-neutral-100 text-base' />
                     </label>
