@@ -1,4 +1,5 @@
 "use client"
+import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
 type stepInfo = {
@@ -12,8 +13,13 @@ type StepProgress = {
 
 
 const StepProgress: React.FC<StepProgress> = (props) => {
+    const [width, setWidth] = useState<string>("0%");
     
-    const width = `${Math.floor((100 / (props.steps.length - 1)) * (props.currentStep - 1))}%`;
+    
+    useEffect(()=>{
+        setWidth(`${Math.floor((100 / (props.steps.length - 1)) * (props.currentStep - 1))}%`)
+    },[props.currentStep])
+    
     console.log(width)
 
     return (

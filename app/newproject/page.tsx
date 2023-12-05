@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import FirstTab from './FirstTab'
 
 export default function NewPoject() {
-    const [currentStep, setCurrentStep] = useState<number>(2)
+    const [currentStep, setCurrentStep] = useState<number>(3)
     const steps = [
         {
             label: 'Address',
