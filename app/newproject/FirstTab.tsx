@@ -10,6 +10,8 @@ type FirstTabProps = {
         organization: string;
         project_name: string;
         description: string;
+        file: File | null;
+        release: string;
     };
     updateFormData: (newData: Partial<FirstTabProps['formData']>) => void;
 };
@@ -30,7 +32,7 @@ const FirstTab: React.FC<FirstTabProps> = ({ currentStep, updateCurrentStep, for
                 <p className='text-xl font-semibold'>
                     Create A New Project Repository
                 </p>
-                <form onSubmit={handleSubmit} action='' className='flex flex-col gap-5 text-sm w-[70vh]'>
+                <form onSubmit={handleSubmit} action='' className='flex flex-col gap-5 text-sm lg:w-[600px]'>
                     <label className='flex flex-col gap-1'>
                         Organization Name *
                         <Input type="text"
@@ -56,10 +58,10 @@ const FirstTab: React.FC<FirstTabProps> = ({ currentStep, updateCurrentStep, for
                             className='bg-neutral-100 text-base' />
                     </label>
 
-                    <Button type='submit' className='w-fit'>Next</Button>
+                    <div className='ml-auto flex gap-5 pt-5'>
+                        <Button type='submit' className='w-fit'>Next</Button>
+                    </div>
                 </form>
-                <div className='ml-auto flex gap-5 pt-5'>
-                </div>
             </div>
         </div>
     )

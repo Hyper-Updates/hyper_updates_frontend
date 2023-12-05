@@ -79,16 +79,16 @@ export default function NewPoject() {
                     <StepProgress currentStep={currentStep} steps={steps} />
                 </div>
 
-                <div className='py-10 mx-40 flex flex-col'>
+                <div className='py-10 mx-auto flex '>
                     {
                         (() => {
                             switch (currentStep) {
                                 case 1:
                                     return <FirstTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} formData={state.formData} updateFormData={updateFormData} />;
                                 case 2:
-                                    return <SecondTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} />;
+                                    return <SecondTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} formData={state.formData} updateFormData={updateFormData}/>;
                                 case 3:
-                                    return <ThirdTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} />;
+                                    return <ThirdTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} formData={state.formData}/>;
                                 default:
                                     return <FirstTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} formData={state.formData} updateFormData={updateFormData} />;
 
