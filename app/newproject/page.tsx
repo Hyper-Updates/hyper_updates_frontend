@@ -21,7 +21,29 @@ const steps = [
     },
 ]
 
+type NewProjectState = {
+    currentStep: number;
+    formData: {
+        organization: string;
+        project_name: string;
+        description: string;
+        file: File | null;
+        release: string;
+    };
+}
+
+
 export default function NewPoject() {
+    const [state, setState] = useState<NewProjectState>({
+        currentStep: 1,
+        formData: {
+            organization: '',
+            project_name: '',
+            description: '',
+            file: null,
+            release: '',
+        },
+    });
     const [currentStep, setCurrentStep] = useState<number>(1)
     const handlePrev = () => {
         {
@@ -40,6 +62,16 @@ export default function NewPoject() {
         setCurrentStep(newStep);
     };
 
+    const updateFormData = (newData: Partial<NewProjectState['formData']>) => {
+        setState((prevState) => ({
+            ...prevState,
+            formData: {
+                ...prevState.formData,
+                ...newData,
+            },
+        }));
+    };
+
     return (
         <div className='px-40 py-40'>
             <div className='border shadow rounded flex flex-col'>
@@ -52,13 +84,14 @@ export default function NewPoject() {
                         (() => {
                             switch (currentStep) {
                                 case 1:
-                                    return <FirstTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} />;
+                                    return <FirstTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} formData={state.formData} updateFormData={updateFormData} />;
                                 case 2:
                                     return <SecondTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} />;
                                 case 3:
                                     return <ThirdTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} />;
                                 default:
-                                    return <FirstTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} />;
+                                    return <FirstTab currentStep={currentStep} updateCurrentStep={updateCurrentStep} formData={state.formData} updateFormData={updateFormData} />;
+
                             }
                         })()
                     }
