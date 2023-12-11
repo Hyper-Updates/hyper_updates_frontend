@@ -14,29 +14,29 @@ export default function Home() {
   const features: feature[] = [
     {
       key: 1,
-      name: "Feature name",
-      description: " Some Feature description will come here",
+      name: "Private Blockchain ",
+      description: "Created a private blockchain using Avalanche HyperSDK",
       icon: "SiNextdotjs"
     },
     {
       key: 1,
-      name: "Feature name",
-      description: " Some Feature description will come here",
+      name: "Updates CLI",
+      description: "Oragsations can use the Updates CLI to create project and add new updates",
       icon: "SiNextdotjs"
     }, {
       key: 1,
-      name: "Feature name",
-      description: " Some Feature description will come here",
+      name: "Blockchain calls from microcontrollers",
+      description: "We have created a hyperVM without a wallet.",
       icon: "SiNextdotjs"
     }, {
       key: 1,
-      name: "Feature name",
-      description: " Some Feature description will come here",
+      name: "Secure And Immutable",
+      description: "Leavering Blockchain's immutablity and security",
       icon: "SiNextdotjs"
     }, {
       key: 1,
-      name: "Feature name",
-      description: " Some Feature description will come here",
+      name: "User Friendly Frontend",
+      description: "Created hyper updates UI where new projects can be created and updates can be pushed",
       icon: "SiNextdotjs"
     },
   ]

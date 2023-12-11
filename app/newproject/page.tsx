@@ -5,6 +5,7 @@ import { FirstTab } from './FirstTab'
 import { Button } from '@/components/ui/button'
 import { SecondTab } from './SecondTab'
 import { ThirdTab } from './ThirdTab'
+import { Project } from '@prisma/client'
 
 const steps = [
     {
